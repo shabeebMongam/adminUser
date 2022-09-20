@@ -1,0 +1,31 @@
+<section class="container mt-5  ">
+<h1>User Login</h1>
+      <form method="POST" action="/">
+
+              
+
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="Email" required />
+                  <label class="form-label" for="form3Example3cg">Your Email</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="Password" required/>
+                  <label class="form-label" for="form3Example4cg">Password</label>
+                </div>
+
+               
+                <a > <input type="submit" class="btn"></a>
+
+                {{#if notInDb}}
+                <p>{{notInDb}}</p>
+                {{else}}
+                <p>.</p>
+                {{/if}}
+               
+
+                <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a href="#!"
+                    class="fw-bold text-body"><a href="/signup"><u>Create Account</u></a></a></p>
+
+              </form>
+</section>

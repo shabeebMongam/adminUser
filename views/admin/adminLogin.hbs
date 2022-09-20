@@ -1,0 +1,32 @@
+<section class="container mt-5  ">
+
+<h1 class="mb-5">Admin Login</h1>
+
+      <form method="POST" action="/admin">
+
+              
+
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="Email" required />
+                  <label class="form-label" for="form3Example3cg">Your Email</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="Password" required/>
+                  <label class="form-label" for="form3Example4cg">Password</label>
+                </div>
+
+               
+                <a > <input type="submit" class="btn"></a>
+
+                {{#if notInDb}}
+                <p>{{notInDb}}</p>
+                {{else}}
+                <p>.</p>
+                {{/if}}
+               
+
+  
+
+              </form>
+</section>

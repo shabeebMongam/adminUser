@@ -1,0 +1,59 @@
+{{!-- <section class="container mt-5">
+    <h1>Admin Panel</h1>
+    <p><a href="/admin/logout/ad">Logout</a></p>
+
+    <table class="table mt-5">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+            <tr>
+                <td>{{this.Name}}</td>
+                <td>{{this.Email}}</td>
+                <td><a href="/admin/edit-user/{{this._id}}" class="btn btn-primary">Edit</a></td>
+                <td><a href="/admin/delete-user/{{this._id}}" class="btn  btn-danger"
+                        onclick=" return confirm('Do you wanna delete the user {{this.Name}}')">Delete</a></td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+    </table>
+</section> --}}
+
+
+
+
+
+
+<section class="container mt-5">
+    <div class="d-flex justify-content-between mb-5">
+        <h1>Admin Panel</h1>
+        <p><a href="/admin/logout/ad">Logout</a></p>
+    </div>
+
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+    <table class="mt-5" id="myTable">
+        <tr class="header">
+            <th style="width:60%;">Name</th>
+            <th style="width:40%;">Email</th>
+        </tr>
+        {{#each users}}
+        <tr>
+            <td>{{this.Name}}</td>
+
+            <td>{{this.Email}}</td>
+            <td><a href="/admin/edit-user/{{this._id}}" class="btn btn-primary">Edit</a></td>
+            <td><a href="/admin/delete-user/{{this._id}}" class="btn  btn-danger"
+                    onclick=" return confirm('Do you wanna delete the user {{this.Name}}')">Delete</a></td>
+
+        </tr>
+        {{/each}}
+
+    </table>
+</section>

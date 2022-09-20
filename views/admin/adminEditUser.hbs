@@ -1,0 +1,30 @@
+<section class="container mt-5">
+
+    <h1>USER EDITING</h1>
+
+    <form action="/admin/edit-user/{{user._id}}" method="POST">
+
+        <div class="form-outline mb-4">
+            <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="Name" value="{{user.Name}}" required />
+            <label class="form-label" for="form3Example1cg">User's Name</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="email" id="form3Example3cg" class="form-control form-control-lg " name="Email" value="{{user.Email}}" required />
+            <label class="form-label" for="form3Example3cg">User Email</label>
+        </div>
+{{!-- 
+        <div class="form-outline mb-4">
+            <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="Password" required/>
+            <label class="form-label" for="form3Example4cg">Password</label>
+        </div> --}}
+
+
+
+        <a> <input type="submit" value="Edit" class="btn"></a>
+
+
+  
+
+    </form>
+</section>
